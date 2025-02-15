@@ -17,7 +17,7 @@ class PyShelfDB:
         with open(self.file_path, "w") as file:
             json.dump(self.data, file)
 
-    def insert(self, record):
+    def insert(self, record:dict):
         self.data.append(record)
         self.commit()
 

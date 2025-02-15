@@ -2,7 +2,7 @@ PyShelfDB
 
 PyShelfDB is a lightweight JSON-based database system that provides basic CRUD (Create, Read, Update, Delete) operations. It allows users to store, filter, update, and delete records within a JSON file, making it a simple and efficient way to manage structured data without requiring a full database engine.
 
-Features
+🚀 Features
 
 Lightweight & Simple: No external dependencies beyond Python's built-in json module.
 
@@ -12,30 +12,30 @@ Basic CRUD Operations: Insert, filter, update, and delete records with ease.
 
 Flexible Querying: Filter records using key-value pairs.
 
-Installation
+📥 Installation
 
 No installation is required. Simply include PyShelfDB.py in your project and import it.
 
-Usage
+📌 Usage
 
-Initialization
+🔹 Initialization
 
 from PyShelfDB import PyShelfDB
 
 db = PyShelfDB("data.json")
 db.load_data()
 
-Inserting Data
+🔹 Inserting Data
 
 record = {"id": 1, "name": "Alice", "age": 25}
 db.insert(record)
 
-Filtering Data
+🔹 Filtering Data
 
 results = db.filter(name="Alice")
 print(results)  # Outputs: [{"id": 1, "name": "Alice", "age": 25}]
 
-Updating Data
+🔹 Updating Data
 
 def filter_func(record):
     return record["id"] == 1
@@ -45,14 +45,18 @@ def update_func(record):
 
 db.update(filter_func, update_func)
 
-Deleting Data
+🔹 Deleting Data
 
 def filter_func(record):
     return record["id"] == 1
 
 db.delete(filter_func)
 
-Methods Overview
+📖 Methods Overview
+
+Method
+
+Description
 
 __init__(file_path="db.json")
 
@@ -82,10 +86,6 @@ delete(filter_func)
 
 Deletes records that match the filter_func condition.
 
-License
+📜 License
 
 This project is licensed under the MIT License.
-
-Contributing
-
-Feel free to submit issues or pull requests to enhance PyShelfDB.
